@@ -189,7 +189,12 @@ a.custom-card:hover {
 }
 
 
-
+.container { /*este es el del login*/
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .form-group {
   margin-bottom: 15px;
@@ -218,6 +223,5 @@ button {
 }
 
 button:hover {
-  background-color: #556c70;
+  background-color: #56a0f0;
 }
-

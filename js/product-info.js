@@ -30,15 +30,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     let indiceImagenActua1 = 1;
     let indiceImagenActua2 = 2;
     let indiceImagenActua3 = 3;
-/**
-${imagenes[indiceImagenActual]}
- */
+    function mostrarImagenGrande() {
+        imagenGrande.innerHTML = `<div id="fotogrande"><img src="${imagenes[indiceImagenActual]}" alt="Imagen grande"></div>`;
+    }
+
+    mostrarImagenGrande();
+
     function mostrarImagenGrande() {
         imagenGrande.innerHTML = `<div class="carrusel" id="imagen-grande">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         
         <div class="carousel-inner">
-          <div class="carousel-item active">
+        <div class="carousel-item active" data-bs-interval="1000">
             <img src="${imagenes[indiceImagenActual]}" class="personalizada">
           </div>
           <div class="carousel-item">
@@ -63,21 +66,6 @@ ${imagenes[indiceImagenActual]}
       </div>`;
     }
 
-    mostrarImagenGrande();
-
-    /*imagenes.forEach((image, index) => {
-        let img = document.createElement('img');
-        img.src = image;
-        img.id = `imagen-${index}`;
-        imagenContainer.appendChild(img);
-
-        //Función click foto
-        img.addEventListener('click', () => {
-            indiceImagenActual = index;
-            mostrarImagenGrande();
-        });
-    });
- */
     //Y Obtener los comentarios 
     const obtenerComentarios = await getJSONData(PRODUCT_INFO_COMMENTS_URL + selectedId + EXT_TYPE);
     let comentarios = obtenerComentarios.data;
