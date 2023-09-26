@@ -34,7 +34,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 ${imagenes[indiceImagenActual]}
  */
     function mostrarImagenGrande() {
-        imagenGrande.innerHTML = `<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        imagenGrande.innerHTML = `<div class="carrusel" id="imagen-grande">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="${imagenes[indiceImagenActual]}" class="personalizada">
@@ -57,6 +59,7 @@ ${imagenes[indiceImagenActual]}
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+      </div>
       </div>`;
     }
 
