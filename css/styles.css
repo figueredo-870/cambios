@@ -189,8 +189,8 @@ a.custom-card:hover {
 }
 
 
-.container { /*este es el del login*/
-  
+.container {
+  /*background: linear-gradient(201deg, #6dff33 0%, #fa361c 78%);*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -224,4 +224,12 @@ button {
 
 button:hover {
   background-color: #56a0f0;
+}
+
+.borde-gris {
+  border-color: #6e6e6e;
+}
+
+#filtrarPrecio, #filtrarLimpiar {
+  border-radius: 3px;
 }
