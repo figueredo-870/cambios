@@ -35,7 +35,7 @@ function mostrarProductoSeleccionado(producto) {
             <h1>${producto.name}</h1>
             <hr>
         </div>
-        <div id="imagen-grande"></div>  
+          
         <p><span class="bold">Precio</span>:<br>${producto.currency}:${producto.cost}</p>
         <p><span class="bold">Descripción:</span><br>${producto.description}</p>
         <p><span class="bold">Categoría</span>:<br>${producto.category}</p>
@@ -43,7 +43,7 @@ function mostrarProductoSeleccionado(producto) {
         <button id="agregarAlCarrito" onclick='agregarAlCarrito(${JSON.stringify(producto)})'>Agregar al carrito</button>
         </div>
     
-    
+        <div id="imagen-grande"></div>
     `;
 
 
@@ -136,6 +136,7 @@ function agregarAlCarrito(producto) {
         });
     }
     localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
+    window.location='cart.html';
 }
 
 
